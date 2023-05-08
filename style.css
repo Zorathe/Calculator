@@ -1,0 +1,95 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    font-family: Gotham Rounded, sans-serif;
+    font-weight: normal;
+    cursor: default;
+    -webkit-touch-callout: none; /* iOS Safari */
+        -webkit-user-select: none; /* Safari */
+        -khtml-user-select: none; /* Konqueror HTML */
+            -moz-user-select: none; /* Old versions of Firefox */
+            -ms-user-select: none; /* Internet Explorer/Edge */
+                user-select: none; /* Non-prefixed version, currently
+                                    supported by Chrome, Edge, Opera and Firefox */
+  }
+  
+  body {
+    padding: 0;
+    margin: 0;
+    background: white;
+  }
+  
+.buttons {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    min-height: 55vh;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+    background: #243441;
+    width:400px;
+  }
+  .calculator-grid{
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    min-height: 100vh;
+    grid-template-columns: repeat(4, 102px);
+    grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+  }
+  .calculator-grid > .buttons > .top{
+    background-color: #000000;
+}
+.calculator-grid > .buttons > .operation{
+    background-color: #000000;
+}
+  .calculator-grid > .buttons > button {
+    transform: translate(-0%,80%);
+    cursor: pointer;
+    font-size: 2rem;
+    color: white;
+    border: 1px solid black;
+    outline: none;
+    /*background-color: rgba(255, 255, 255, .75);*/
+    background-color: #000000;
+  }
+  
+  .calculator-grid > .buttons > button:hover {
+    /*background-color: rgba(255, 255, 255, .9);*/
+    background-color: #364959;
+  }
+  
+  .span-two {
+    grid-column: span 2;
+  }
+  
+  .output {
+    grid-column: 1 / -1;
+    background-color: rgba(0, 0, 0);
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 10px;
+    height: 200px;
+    border-radius: 30px;
+    word-wrap: break-word;
+    word-break: break-all;
+    max-width:400px;
+    overflow: hidden;
+    text-overflow: clip;
+    transform: translate(-0%,10%);
+    z-index: -1;
+  }
+  
+  .output .previous-operand {
+    color: rgba(255, 255, 255, .75);
+    font-size: 1.5rem;
+    
+  }
+  
+  .output .current-operand {
+    color: white;
+    font-size: 4.0rem;
+    padding:5px;
+
+  }
